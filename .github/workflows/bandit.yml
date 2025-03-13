@@ -18,7 +18,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install bandit bandit-sarif
+          pip install bandit
+          pip install pipx
+          pipx ensurepath
+          pipx install bandit-sarif
       - name: Run Bandit
         run: bandit -r . -f json -o bandit-results.json
       - name: Convert Bandit JSON to SARIF
