@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class Example {
+public class java {
     public static void main(String[] args) {
         String userInput = args[0]; // User input (vulnerable to injection)
         String dbUrl = "jdbc:mysql://localhost:3306/mydb";
